@@ -1,0 +1,60 @@
+.film {
+  padding: 2rem;
+
+  &__section {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__img {
+    flex-basis: 300px;
+  }
+  &__poster {
+    width: 100%;
+    margin: 0 1rem 0 0;
+  }
+  &__detail {
+    display: flex;
+    flex-basis: 800px;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1rem;
+  }
+  &__title {
+    margin: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  &__genres {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+  }
+  &__popularity {
+    margin: 0.5rem;
+    color: #fff;
+  }
+  &__date,
+  &__average,
+  &__count {
+    margin: 0.5rem;
+    color: #fff;
+  }
+  &__overview {
+    margin: 2rem 0 0;
+    color: #fff;
+  }
+  &__del {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 64px;
+    height: 64px;
+
+    fill: #fff;
+    stroke: #fff;
+    background-color: var(--primary-color);
+  }
+}

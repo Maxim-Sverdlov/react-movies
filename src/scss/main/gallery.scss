@@ -1,0 +1,93 @@
+.gallery {
+  padding: 1rem;
+
+  &__label {
+    padding: 1rem;
+
+    color: #fff;
+    font-weight: bold;
+  }
+  &__filter {
+    padding: 0.5rem;
+
+    color: #000;
+
+    border-radius: 5px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex-grow: 0;
+    flex-basis: 20%;
+    margin: 15px 18px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: start;
+  }
+  &__link {
+    width: 190px;
+
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem;
+
+    font-size: 1rem;
+    color: #fff;
+
+    letter-spacing: 0.5px;
+  }
+  &__info {
+    display: none;
+    flex-basis: 190px;
+  }
+  &__link:hover &__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 100%;
+    width: 190px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  &__year,
+  &__rating {
+    color: #000;
+    font-weight: bold;
+  }
+  &__add {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+
+    font-size: 1rem;
+    color: #000;
+
+    background-color: #fff;
+
+    border-radius: 5px;
+  }
+  &__del {
+    display: flex;
+    align-self: flex-start;
+  }
+}
