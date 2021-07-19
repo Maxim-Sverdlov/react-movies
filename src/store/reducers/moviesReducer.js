@@ -1,4 +1,4 @@
-import { IS_LOADING_MOVIES, LOADING_MOVIES, PAGE, SORT } from "../constants";
+import { IS_LOADING_MOVIES, LOAD_MOVIES } from "../constants";
 
 const initialState = {
     isLoading: false,
@@ -12,7 +12,7 @@ const moviesReducer = (state = initialState, action) => {
                 ...state,
                 isLoading: action.payload,
             };
-        case LOADING_MOVIES:
+        case LOAD_MOVIES:
             return {
                 ...state,
                 data: action.payload,
