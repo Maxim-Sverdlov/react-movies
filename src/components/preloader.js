@@ -1,6 +1,6 @@
-function Plug() {
+function Preloader() {
     return (
-        <div className="plug">
+        <div className="preloader">
             <div className="yellow"></div>
             <div className="red"></div>
             <div className="blue"></div>
@@ -8,5 +8,6 @@ function Plug() {
         </div>
     );
   }
-export default Plug;
+
+export default Preloader;
   

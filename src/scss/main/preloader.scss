@@ -5,12 +5,12 @@
   --violet: #da00f7;
 }
 
-div.plug {
+div.preloader {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.plug > div {
+div.preloader > div {
   width: 3vw;
   height: 3vw;
   border-radius: 100%;
