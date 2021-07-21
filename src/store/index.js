@@ -2,12 +2,15 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import moviesReducer from './reducers/moviesReducer';
 import pageReducer from './reducers/pageReducer';
 import sortReducer from './reducers/sortReducer';
+import genresReducer from './reducers/genresReducer';
+
 import logger from './middleware/logger';
 
 const rootReducer = combineReducers({
   movies: moviesReducer,
   page: pageReducer,
   sort: sortReducer,
+  genresList: genresReducer,
 });
 
 const store = configureStore({

@@ -8,7 +8,7 @@ const Sorter = () => {
 
   const handlerChange = (e) => {
     dispatch(setPage(1));
-	dispatch(setSort(e.target.value));
+	  dispatch(setSort(e.target.value));
   };
 
   return (

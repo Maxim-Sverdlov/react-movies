@@ -8,6 +8,7 @@ import { loadMovies } from '../store/actions';
 import Sorter from './sorter';
 import MoviesList from './moviesList';
 import MovieDetail from './movieDetail';
+import Pagination from './pagination';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const App = () => {
             <Route path="/" exact>
               <Sorter />
               <MoviesList />
-              <section class="pagination"></section>
+              <Pagination />
             </Route>
             <Route path="/movie-detail/:id" exact>
               <MovieDetail />
