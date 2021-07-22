@@ -23,7 +23,7 @@ const App = () => {
     const { currentPage } = useSelector((state) => state.page);
     const { order } = useSelector((state) => state.sort);
 
-    const { isAuth, login, role } = useSelector((state) => state.auth);
+    const { isAuth, login } = useSelector((state) => state.auth);
 
     useEffect(() => {
         dispatch(loadMovies(currentPage, order));

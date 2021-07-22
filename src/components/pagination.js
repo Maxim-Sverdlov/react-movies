@@ -3,7 +3,7 @@ import { setPage } from '../store/actions';
 
 const Pagination = () => {
   const dispatch = useDispatch();
-  const { currentPage, totalPages } = useSelector((state) => state.page);
+  const { totalPages } = useSelector((state) => state.page);
   const pages = [];
 
   for (let i = 1; i <= totalPages; i++) {

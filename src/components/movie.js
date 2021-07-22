@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+//import { useSelector, useDispatch } from 'react-redux';
 import plug from '../images/content/clapper.svg';
 
 const Movie = ({ item }) => {
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
     const {title, poster_path, vote_average, release_date} = item;
-    //console.log(item);
     let poster = '';
   
     if (poster_path !== null) {
