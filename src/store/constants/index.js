@@ -6,3 +6,7 @@ export const SORT = 'SORT';
 
 export const IS_LOADING_GENRES_LIST = 'IS_LOADING_GENRES_LIST';
 export const LOAD_GENRES_LIST = 'LOAD_GENRES_LIST';
+
+export const LOGIN = 'LOGIN';
+export const ROLE = 'ROLE';
+export const IS_AUTH = 'IS_AUTH';

@@ -1,4 +1,4 @@
-import { IS_LOADING_MOVIES, LOAD_MOVIES, PAGE, SORT, IS_LOADING_GENRES_LIST, LOAD_GENRES_LIST } from "../constants";
+import { IS_LOADING_MOVIES, LOAD_MOVIES, PAGE, SORT, IS_LOADING_GENRES_LIST, LOAD_GENRES_LIST, LOGIN, ROLE, IS_AUTH } from "../constants";
 import { getMovies } from '../../services';
 import { getGenresList } from "../../services";
 
@@ -39,3 +39,18 @@ export const loadGenresList = () => (dispatch) => {
     })
     .then(() => dispatch(setIsLoadingGenresList(false)));
 };
+
+export const setLogin = (login) => ({
+    type: LOGIN,
+    payload: login,
+});
+
+export const setRole = (role) => ({
+    type: ROLE,
+    payload: role,
+});
+
+export const setIsAuth = (value) => ({
+    type: IS_AUTH,
+    payload: value,
+})

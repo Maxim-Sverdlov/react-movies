@@ -20,7 +20,6 @@ const MovieDetail = () => {
   const {poster_path, title, popularity, release_date, vote_average, vote_count, overview} = film;
 
   const { genres } = useSelector((state) => state.genresList);
-  console.log(film);
 
   let movieGenres = genres.filter((item) => film['genre_ids'].indexOf(item.id) !== -1);
   movieGenres = movieGenres.map(item => item.name);

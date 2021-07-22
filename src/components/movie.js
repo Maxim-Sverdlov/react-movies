@@ -21,8 +21,8 @@ const Movie = ({ item }) => {
                 <img className="gallery__img" src={poster} alt={title} />
                 <h3 className="gallery__title">{title}</h3>
                 <section className="gallery__info">
-                    <span class="gallery__year">Release date: <br />{release_date}</span>
-                    <span class="gallery__rating">Rating: {vote_average}</span>
+                    <span className="gallery__year">Release date: <br />{release_date}</span>
+                    <span className="gallery__rating">Rating: {vote_average}</span>
                 </section>
             </Link>
         </li>

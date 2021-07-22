@@ -14,7 +14,7 @@ const Sorter = () => {
   return (
 
     <section className="form">
-        <label className="gallery__label" for="filter">Sorted by </label>
+        <label className="gallery__label" htmlFor="filter">Sorted by </label>
         <select className="gallery__filter" onChange={handlerChange} value={order}>
             <option value="popularity.desc">Popularity DESC</option>
             <option value="release_date.asc">Release date ASC</option>

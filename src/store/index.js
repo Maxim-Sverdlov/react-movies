@@ -3,6 +3,7 @@ import moviesReducer from './reducers/moviesReducer';
 import pageReducer from './reducers/pageReducer';
 import sortReducer from './reducers/sortReducer';
 import genresReducer from './reducers/genresReducer';
+import authReducer from './reducers/authReducer';
 
 import logger from './middleware/logger';
 
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   page: pageReducer,
   sort: sortReducer,
   genresList: genresReducer,
+  auth: authReducer,
 });
 
 const store = configureStore({
