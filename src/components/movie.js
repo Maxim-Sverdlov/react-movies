@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
-//import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setDeleteMovie } from '../store/actions';
 import plug from '../images/content/clapper.svg';
 
 const Movie = ({ item }) => {
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const { role } = useSelector((state) => state.auth);
+
+    const deleteHandler = () => {
+      dispatch(setDeleteMovie(item));
+    }
 
     const {title, poster_path, vote_average, release_date} = item;
+    
     let poster = '';
   
     if (poster_path !== null) {
@@ -24,6 +31,16 @@ const Movie = ({ item }) => {
                     <span className="gallery__rating">Rating: {vote_average}</span>
                 </section>
             </Link>
+            {
+              role === 'admin' ? 
+                <button className="gallery__del" onClick={deleteHandler}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 6l3 18h12l3-18h-18zm19-4v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.316c0 .901.73 2 1.631 2h5.711z"/>
+                  </svg>
+                </button> 
+                : 
+                null
+            }
         </li>
     );
   };

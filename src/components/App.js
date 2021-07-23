@@ -15,6 +15,9 @@ import Auth from './auth';
 import Registration from './registration';
 import PageNotFound from './pageNotFound';
 
+import AddMovie from './addMovie';
+import PrivateRoute from './privateRoute';
+
 import { setIsAuth, setLogin, setRole } from '../store/actions';
 
 const App = () => {
@@ -70,6 +73,7 @@ const App = () => {
             <Route path="/registration" exact>
               <Registration />
             </Route>
+            <PrivateRoute component={AddMovie} path="/add-movie" exact />
             <PageNotFound />
           </Switch>
           </div>

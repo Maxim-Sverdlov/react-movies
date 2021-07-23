@@ -1,4 +1,4 @@
-import { IS_LOADING_MOVIES, LOAD_MOVIES, PAGE, SORT, IS_LOADING_GENRES_LIST, LOAD_GENRES_LIST, LOGIN, ROLE, IS_AUTH } from "../constants";
+import { IS_LOADING_MOVIES, LOAD_MOVIES, PAGE, SORT, IS_LOADING_GENRES_LIST, LOAD_GENRES_LIST, LOGIN, ROLE, IS_AUTH, ADD_MOVIE, DELETE_MOVIE } from "../constants";
 import { getMovies } from '../../services';
 import { getGenresList } from "../../services";
 
@@ -52,5 +52,15 @@ export const setRole = (role) => ({
 
 export const setIsAuth = (value) => ({
     type: IS_AUTH,
+    payload: value,
+});
+
+export const setAddMovie = (value) => ({
+    type: ADD_MOVIE,
+    payload: value,
+});
+
+export const setDeleteMovie = (value) => ({
+    type: DELETE_MOVIE,
     payload: value,
 })

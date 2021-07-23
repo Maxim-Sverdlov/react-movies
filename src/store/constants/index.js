@@ -10,3 +10,6 @@ export const LOAD_GENRES_LIST = 'LOAD_GENRES_LIST';
 export const LOGIN = 'LOGIN';
 export const ROLE = 'ROLE';
 export const IS_AUTH = 'IS_AUTH';
+
+export const ADD_MOVIE = 'ADD_MOVIE';
+export const DELETE_MOVIE = 'DELETE_MOVIE';

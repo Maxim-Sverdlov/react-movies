@@ -1,4 +1,4 @@
-import { IS_LOADING_MOVIES, LOAD_MOVIES } from "../constants";
+import { IS_LOADING_MOVIES, LOAD_MOVIES, ADD_MOVIE, DELETE_MOVIE } from "../constants";
 
 const initialState = {
     isLoading: false,
@@ -17,6 +17,16 @@ const moviesReducer = (state = initialState, action) => {
                 ...state,
                 data: action.payload,
             };
+        case ADD_MOVIE:
+            return {
+                ...state,
+                data: [action.payload, ...state.data],
+            };
+        case DELETE_MOVIE:
+            return {
+                ...state,
+                data: state.data.filter((movie) => movie !== action.payload),
+            }
         default:
             return state;
     };
